@@ -79,7 +79,7 @@
                             </div>
                             <div class="card-footer text-center">
                                 <div class="small">
-                                    {{-- <a href="{{route('register')}}">Belum Punya Akun? Daftar!</a> --}}
+                                    <a href="{{route('register')}}">Belum Punya Akun? Daftar!</a>
                                 </div>
                             </div>
                         </div>
