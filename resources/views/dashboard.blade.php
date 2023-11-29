@@ -1,4 +1,4 @@
-@extends('layout')
+ @extends('layout')
 @section('content')
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="#"></a>

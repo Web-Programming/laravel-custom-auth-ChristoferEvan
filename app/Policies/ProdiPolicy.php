@@ -13,7 +13,7 @@ class ProdiPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return $user->level == "admin"|| $user->level == "user";
     }
 
     /**
@@ -21,7 +21,7 @@ class ProdiPolicy
      */
     public function view(User $user, Prodi $prodi): bool
     {
-        //
+        return $user->level == "admin"|| $user->level == "user";
     }
 
     /**
@@ -29,7 +29,7 @@ class ProdiPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return $user->level == "admin";
     }
 
     /**
@@ -37,7 +37,7 @@ class ProdiPolicy
      */
     public function update(User $user, Prodi $prodi): bool
     {
-        //
+        return $user->level == "admin";
     }
 
     /**
@@ -45,7 +45,7 @@ class ProdiPolicy
      */
     public function delete(User $user, Prodi $prodi): bool
     {
-        //
+        return $user->level == "admin";
     }
 
     /**
@@ -53,7 +53,7 @@ class ProdiPolicy
      */
     public function restore(User $user, Prodi $prodi): bool
     {
-        //
+        return $user->level == "admin";
     }
 
     /**
@@ -61,6 +61,6 @@ class ProdiPolicy
      */
     public function forceDelete(User $user, Prodi $prodi): bool
     {
-        //
+        return $user->level == "admin";
     }
 }
