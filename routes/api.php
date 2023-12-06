@@ -25,4 +25,8 @@ Route::post('login',[RegisterController::class,'login']);
 Route::group(['middleware'=>['auth']],function(){
 
     Route::apiResource("Prodi",ProdiController::class);
+    Route::middleware('auth:sanctum')->get('/prodi', [ProdiController::class, 'index']);
+    Route::middleware('auth:sanctum')->post('/prodi/store', [ProdiController::class, 'store']);
+    Route::middleware('auth:sanctum')->delete('/prodi/delete/{id}', [ProdiController::class, 'delete']);
+
 });
