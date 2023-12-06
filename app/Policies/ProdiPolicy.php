@@ -29,7 +29,12 @@ class ProdiPolicy
      */
     public function create(User $user): bool
     {
-        return $user->level == "admin";
+        // return $user->level == "admin";
+
+        return in_array($user->email,[
+            'rachmat.nur@gmail.com',
+            'ahmad@gmail.com'
+        ]);
     }
 
     /**
